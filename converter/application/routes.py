@@ -9,7 +9,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 
-@app.route('/date/<convertedCurrency>', methods=['GET', 'POST'])
+@app.route('/result/<convertedCurrency>', methods=['GET', 'POST'])
 def convertedCurrency(convertedCurrency):
     try:
         convertedCurrency = int(float(convertedCurrency))
