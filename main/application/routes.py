@@ -12,7 +12,7 @@ def index():
 
 
 @app.route('/result', methods=['GET', 'POST'])
-def date():
+def result():
     formData = request.form.get('result')
     formData = str(formData)
     convertedCurrency = requests.post('http://converter:5001/result/' + formData)
