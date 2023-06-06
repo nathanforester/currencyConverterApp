@@ -16,5 +16,5 @@ def result():
     formData = request.form.get('result')
     formData = str(formData)
     convertedCurrency = requests.post('http://converter:5001/result/' + formData)
-    return render_template('convert.html', formData=formData, birthDate=convertedCurrency.text)
+    return render_template('convert.html', formData=formData, convertedCurrency=convertedCurrency.text)
 
