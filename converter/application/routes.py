@@ -9,15 +9,15 @@ from datetime import datetime
 app = Flask(__name__)
 
 
-@app.route('/result/<convertedCurrency>', methods=['GET', 'POST'])
-def convertedCurrency(convertedCurrency):
+@app.route('/result/<converted>', methods=['GET', 'POST'])
+def convertedCurrency(converted):
     try:
-        convertedCurrency = int(float(convertedCurrency))
+        converted = int(float(converted))
     except ValueError:
         return "ValueError: enter a number"
-    if convertedCurrency < 0:
+    if converted < 1:
         return 'Please enter at least 1'
     else:
-        convertedCurrency = convertedCurrency * 1.25
-    return str(convertedCurrency)
+        converted = converted * 1.25
+    return str(converted)
     
